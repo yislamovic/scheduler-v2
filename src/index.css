@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Session Badge */
+  .session-badge {
+    @apply fixed bottom-6 left-6 z-50;
+    @apply bg-gradient-to-r from-primary-500 to-primary-600;
+    @apply text-white px-4 py-2 rounded-full;
+    @apply shadow-lg shadow-primary-500/30;
+    @apply flex items-center gap-2 text-sm font-medium;
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/40;
+  }
+
+  /* Appointment Card */
+  .appointment-card {
+    @apply bg-white rounded-xl border border-gray-200;
+    @apply transition-all duration-200;
+    @apply hover:shadow-lg hover:border-primary-300;
+  }
+
+  /* Button Base */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium;
+    @apply transition-all duration-200;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600;
+    @apply text-white shadow-md shadow-primary-500/30;
+    @apply hover:shadow-lg hover:shadow-primary-500/40;
+    @apply hover:from-primary-600 hover:to-primary-700;
+  }
+
+  .btn-danger {
+    @apply bg-gradient-to-r from-danger-500 to-danger-600;
+    @apply text-white shadow-md shadow-danger-500/30;
+    @apply hover:shadow-lg hover:shadow-danger-500/40;
+    @apply hover:from-danger-600 hover:to-danger-700;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700;
+    @apply hover:bg-gray-200;
+  }
+}
