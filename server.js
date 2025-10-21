@@ -150,6 +150,10 @@ function createSession() {
     appointments: deepClone(BASE_DATA.appointments),
     interviewers: deepClone(BASE_DATA.interviewers)
   };
+
+  // Calculate correct spots for this session
+  updateSpots(sessionData);
+
   sessions.set(sessionId, sessionData);
   console.log(`Created new session: ${sessionId}`);
   return sessionData;
